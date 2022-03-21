@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="./css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css" />
+		<link rel="stylesheet" type="text/css" href="./css/style.css" />
+		<link rel="stylesheet" type="text/css" href="./css/xiangxi.css" />
+		<script src="./js/jquery.min.js"></script>
+		<script src="./js/swiper-bundle.min.js"></script>
+		<link rel="stylesheet" href="./css/jquery-ui.css">
+		<script src="./js/jquery-ui.js"></script>
+		<title>提交订单</title>
+		<meta name="viewport" content="width=750, user-scalable=no">
+				<script type="text/javascript">
+					(function() {
+						document.addEventListener('DOMContentLoaded', function() {
+							var html = document.documentElement;
+							var windowWidth = html.clientWidth;
+							html.style.fontSize = windowWidth / 7.5 + 'px';
+						}, false);
+					})();
+					$( function() {
+						$.datepicker.regional["zh-CN"] = { closeText: "关闭", prevText: "&#x3c;上月", nextText: "下月&#x3e;", currentText: "今天", monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"], monthNamesShort: ["一", "二", "三", "四", "五", "六", "七", "八", "九", "十", "十一", "十二"], dayNames: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"], dayNamesShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六"], dayNamesMin: ["日", "一", "二", "三", "四", "五", "六"], weekHeader: "周", dateFormat: "yy-mm-dd", firstDay: 1, isRTL: !1, showMonthAfterYear: !0, yearSuffix: "年" }
+							$.datepicker.setDefaults($.datepicker.regional["zh-CN"]);
+							var datePicker = $("#ctl00_BodyMain_txtDate").datepicker({
+									showOtherMonths: true,
+									selectOtherMonths: true
+							});
+							let date = new Date
+					    $( "#datepicker" ).datepicker({
+								 minDate: new Date(date.getFullYear(),date.getMonth(),date.getDate()+1)
+							});
+					  } );
+				</script>
+				<style>
+				body{
+					background: #F4F7F7;
+				}
+				</style>
+	</head>
+	<body>
+		<div class="showbox">
+			<div class="titmk1">
+				<div class="mk1tit">富华游乐园金秋富华游乐园金秋备份</div>
+				<div class="mk1fex">
+					<div class="mk1left">
+						<img src="img/yes.png" />
+						<div>限时抢购</div>
+					</div>
+					<div class="mk1left">
+						<img src="img/yes.png" />
+						<div>商家不支持退改</div>
+					</div>
+				</div>
+			</div>
+			<div class="ddmk2">
+				<ul>
+					<li>
+						<div class="ddmk2left">有效期：</div>
+						<div class="ddmk2right">至 2021-10-07 17:00</div>
+					</li>
+					<li>
+						<div class="ddmk2left">单价：</div>
+						<div class="ddmk2right">2.00元</div>
+					</li>
+					<li>
+						<div class="ddmk2left">数量：</div>
+						<div class="ddmk2shuliang">
+							<button id="red">-</button>
+							<div id="num">1</div>
+							<button id="add">+</button>
+						</div>
+					</li>
+					<li>
+						<div class="ddmk2left">订单总价：</div>
+						<div class="ddmk2right reddmk2right">2.00元</div>
+					</li>
+				</ul>
+			</div>
+			<div class="ddmk2 ddmk3">
+				<ul>
+					<li>
+						<div class="ddmk2left">手机号：</div>
+						<input type="number" maxlength="11" placeholder="请输入手机号用于接收凭证" />
+					</li>
+					<li>
+						<div class="ddmk2left">使用日期：</div>
+						<!-- <input type="date" value="请选择时间" min="2015-09-16" max="2025-09-26"/> -->
+						<input type="text" id="datepicker">
+					</li>
+				</ul>
+			</div>
+			<div class="ddmk2 ddmk3 ddmk4">
+				<ul>
+					<li>
+						<div class="ddmk2tit">*本产品为邮递产品请认真填写信息</div>
+					</li>
+					<li>
+						<div class="ddmk2left">收货人：</div>
+						<input type="text" placeholder="请填写真实姓名" />
+					</li>
+					<li>
+						<div class="ddmk2left">收货地址：</div>
+						<input type="text" placeholder="请填写收货地址" />
+					</li>
+				</ul>
+			</div>
+			<div class="ddmk2 ddmk3 ddmk5">
+				<ul>
+					<li>
+						<div class="ddmk2tit">*本产品需要实名制请认真填写信息</div>
+					</li>
+					<li>
+						<div class="ddmk2left">身份证号：</div>
+						<input type="text" maxlength="18" placeholder="请填写身份证号" />
+					</li>
+				</ul>
+			</div>
+			<div class="ddxieyi">
+				<img class="show" src="img/showimg1.png" >
+				<img class="show1" src="img/showimg1_1.png" >
+				<div>我已阅读，并同意<a href="#">《平台用户服务协议》</a></div>
+			</div>
+			<a class="ddbtn">提交订单</a>
+		</div>
+	</body>
+	<script src="./js/main.js"></script>
+</html>
